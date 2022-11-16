@@ -1,0 +1,57 @@
+<div class="main">
+    <div class="left">
+        <p class="logo">fleeso</p>
+        <h1>Start your journey with us.</h1>
+        <p class="text">Discover the world's best community of freelancer and bussiness owner</p>
+        <div class="testimonial">
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, odio. Eaque deleniti, excepturi
+                recusandae, quasi iusto veritatis.
+            </p>
+            <div class="box">
+                <img src="./../assets/img.jpg" class="box_img" />
+                <div class="box_content">
+                    <p>Timson K</p>
+                    <p>freelancer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <p class="heading">Sign up</p>
+        <p class="right_p">Have an account? <a href="/login">Login</a></p>
+        <div>
+            <form>
+                <div class="selection">
+                    <p class="label">Looking For?</p>
+
+                    <input class="checkbox-tools" type="radio" name="tools" id="eclipse">
+                    <label for="eclipse">
+                        Projects
+                    </label>
+
+                    <input class="checkbox-tools" type="radio" name="tools" id="square">
+                    <label for="square">
+                        Designs
+                    </label>
+                </div>
+                <p class="label">Email</p>
+                <input class="form-control" type="text" name="" id="">
+                <p class="label">Password</p>
+                <input class="form-control" type="password" name="" id="">
+                <p class="label">Select Skills</p>
+                <input type="text" (keyup)="search()" [(ngModel)]="searchText" name="searchText" class="form-control"
+                    placeholder="Type to search">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-action" *ngFor="let skilled of filterarray"
+                        (click)="selectSkill(skilled)">{{skilled.name}}</li>
+                </ul>
+                <span class="badge  chip" *ngFor="let select of newSkill">{{select.name}}
+                    <span class="material-icons chip_close" (click)="remove(select)">close</span>
+                </span>
+                <div></div>
+                <button class="btn">Create account</button>
+            </form>
+        </div>
+
+    </div>
